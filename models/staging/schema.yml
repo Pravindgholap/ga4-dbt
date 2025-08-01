@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: stg_ga4_events
+    tests:
+      - not_null:  # Old syntax for not_null
+          column_name: user_pseudo_id  # Changed from 'field' to 'column_name'
+      - accepted_values:  # Old syntax for accepted_values
+          column_name: event_name      # Changed from 'field' to 'column_name'
+          values: ['purchase']
